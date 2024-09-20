@@ -227,7 +227,7 @@ public sealed class Pico4SAFTExtTrackingModule : ExtTrackingModule, IDisposable
                             }
                         }
 
-                        if (trackingState.Item2) 
+                        //if (trackingState.Item2) 
                             //UpdateExpression(pxrShape, unifiedShape);
                     }
                 }
