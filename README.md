@@ -1,5 +1,7 @@
 ## English || [简体中文](README_CN.md)
 
+Disabled Face Tracking , only with eye tracking enabled.
+
 # VRCFaceTracking - Pico 4 Pro/Enterprise Module
 
 > Let VRCFaceTracking use the Pico 4 Pro/Enterprise's face tracking data via the Streaming Assistant, PICO Connect, or Business Streaming.
