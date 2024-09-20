@@ -59,7 +59,8 @@ public sealed class Pico4SAFTExtTrackingModule : ExtTrackingModule, IDisposable
     public override (bool eyeSuccess, bool expressionSuccess) Initialize(bool eyeAvailable, bool expressionAvailable)
     {
         trackingState = (eyeAvailable, expressionAvailable);
-        if (!StreamerValidity() || (!eyeAvailable && !expressionAvailable))
+        //if (!StreamerValidity() || (!eyeAvailable && !expressionAvailable))
+        if (!StreamerValidity() || (!eyeAvailable))
         {
             Logger.LogWarning("No data is usable, skipping initialization.");
             return (false, false);
@@ -196,7 +197,7 @@ public sealed class Pico4SAFTExtTrackingModule : ExtTrackingModule, IDisposable
     {
         if (Status != ModuleState.Active)
         {
-            Thread.Sleep(100);
+            Thread.Sleep(30);
             return;
         }
 
@@ -227,7 +228,7 @@ public sealed class Pico4SAFTExtTrackingModule : ExtTrackingModule, IDisposable
                         }
 
                         if (trackingState.Item2) 
-                            UpdateExpression(pxrShape, unifiedShape);
+                            //UpdateExpression(pxrShape, unifiedShape);
                     }
                 }
             }
